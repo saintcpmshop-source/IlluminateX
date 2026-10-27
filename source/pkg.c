@@ -1,14 +1,14 @@
 #include "tools.h"
 #include <stdio.h>
 
-void install_pkg(const char* path) {
+void pkg_install(const char* path) {
     printf("[!] Installing PKG: %s\n", path);
 }
 
-void extract_pkg(const char* path) {
-    printf("[!] Extracting PKG contents to /dev_hdd0/game/...\n");
+void pkg_extract(const char* path) {
+    printf("[!] Extracting PKG files...\n");
 }
 
-void decrypt_pkg(const char* path) {
-    printf("[!] Decrypting retail PKG to debug format...\n");
+void pkg_decrypt(const char* path) {
+    printf("[!] Decrypting Retail PKG using Console ID...\n");
 }

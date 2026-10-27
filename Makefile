@@ -11,7 +11,7 @@ CC          := ppu-gcc
 CFLAGS      := -O2 -Wall -mcpu=cell -I$(PSL1GHT)/ppu/include -I$(PORTLIBS)/include
 LDFLAGS     := -L$(PSL1GHT)/ppu/lib -L$(PORTLIBS)/lib -lsysfs -lsysutil -lsysprocess -lsysss -lsyssm -lio -lrt -lm
 
-OBJS        := source/main.o source/system.o source/hardware.o source/storage.o source/pkg.o source/network.o source/debug.o
+OBJS        := source/main.o source/sys_control.o source/hw_control.o source/pkg_manager.o source/dev_tools.o source/net_tools.o source/game_mods.o
 
 all: $(TARGET).pkg
 

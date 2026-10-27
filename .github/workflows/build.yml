@@ -1,0 +1,12 @@
+#!/bin/bash
+# IlluminateX Build Script
+# Copyright (c) 2026 saintcpmshop-source
+
+echo "Generating PARAM.SFO..."
+# This uses the PSL1GHT sfo tool to convert the text file to binary
+sfo assets/PARAM.SFO.txt
+
+echo "Compiling IlluminateX.pkg..."
+make
+
+echo "Build complete! Your PKG is ready."

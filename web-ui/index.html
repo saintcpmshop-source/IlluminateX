@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IlluminateX Dashboard</title>
+    <style>
+        :root { --bg: #0f172a; --panel: #1e293b; --text: #f8fafc; --accent: #38bdf8; --danger: #ef4444; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 40px; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .header h1 { color: var(--accent); font-size: 3rem; margin: 0; text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .card { background: var(--panel); border: 1px solid #334155; border-radius: 12px; padding: 25px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5); }
+        .card h2 { margin-top: 0; color: var(--accent); border-bottom: 1px solid #334155; padding-bottom: 10px; }
+        .btn { display: block; width: 100%; padding: 12px; margin-top: 15px; background: var(--accent); color: #000; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .btn-danger { background: var(--danger); color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>IlluminateX</h1>
+        <p>By saintcpmshop-source</p>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h2>💾 Storage Manager</h2>
+            <p>Internal HDD: Connected</p>
+            <p>USB 1: Connected</p>
+            <button class="btn">Scan for ISOs</button>
+        </div>
+        <div class="card">
+            <h2>⚙️ System Controls</h2>
+            <p>CPU Temp: 54°C</p>
+            <button class="btn btn-danger">Reboot Console</button>
+        </div>
+    </div>
+</body>
+</html>

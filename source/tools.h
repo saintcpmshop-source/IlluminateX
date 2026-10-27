@@ -2,26 +2,51 @@
 #define TOOLS_H
 
 // System Tools
-void reboot_ps3();
-void shutdown_ps3();
-void toggle_hen();
-void toggle_cfw();
-void set_fan_speed(int speed);
+void sys_reboot();
+void sys_shutdown();
+void sys_toggle_hen();
+void sys_toggle_cfw();
+void sys_spoof_version(const char* ver);
+void sys_toggle_qa_flag(int enable);
+void sys_set_console_id();
+void sys_set_fan_speed(int speed);
 
-// Storage Tools
-void mount_iso(const char* path);
-void unmount_iso();
-void format_usb();
-void check_hdd_health();
+// Hardware Tools
+int  hw_get_cpu_temp();
+int  hw_get_rsx_temp();
+void hw_overclock_rsx(int enable);
+void hw_dump_eid_root_key();
+void hw_read_syscon();
+void hw_write_syscon();
+void hw_toggle_ps2_emulation();
 
-// PKG Tools
-void install_pkg(const char* path);
-void extract_pkg(const char* path);
-void decrypt_pkg(const char* path);
+// Storage & Game Tools
+void iso_scan_usb();
+void iso_mount(const char* path);
+void iso_unmount();
+void hdd_format();
+void hdd_check_smart();
+void hdd_expand_ps2_partition();
+void game_toggle_cobra_mode();
+
+// PKG & File Tools
+void pkg_install(const char* path);
+void pkg_extract(const char* path);
+void pkg_decrypt(const char* path);
+void pkg_merge_split_files();
+void file_manager_copy(const char* src, const char* dst);
 
 // Network Tools
-void start_ftp();
-void enable_remote_play();
-void spoof_firmware(const char* version);
+void net_start_ftp();
+void net_stop_ftp();
+void net_enable_remote_play();
+void net_change_mac(const char* mac);
+void net_start_web_server();
+
+// Debug & Development Tools
+void dev_toggle_xmb_debug();
+void dev_spoof_region(const char* region);
+void dev_dump_lv2_memory();
+void dev_dump_flash();
 
 #endif

@@ -1,20 +1,20 @@
 #include "tools.h"
 #include <stdio.h>
-#include <sys/fs.h>
+#include <sys/storage.h>
 
-void mount_iso(const char* path) {
+// Cobra syscall
+extern int sys_storage_ext_mount_discfile(const char* file, const char* mount_point);
+
+void iso_mount(const char* path) {
     printf("[!] Mounting ISO: %s\n", path);
-    // syscall to mount disc file
+    sys_storage_ext_mount_discfile(path, "/dev_bdvd");
 }
 
-void unmount_iso() {
-    printf("[!] Unmounting virtual Blu-ray drive...\n");
+void iso_unmount() {
+    printf("[!] Unmounting BD Drive...\n");
 }
 
-void format_usb() {
-    printf("[!] Formatting USB to FAT32...\n");
-}
-
-void check_hdd_health() {
-    printf("[!] Checking HDD S.M.A.R.T. Status...\n");
+void hdd_format() {
+    printf("[!!!] Formatting Internal HDD...\n");
+    // sys_fs_format
 }

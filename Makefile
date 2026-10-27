@@ -9,9 +9,9 @@ PATH        := $(PS3DEV)/ppu/bin:$(PATH)
 
 CC          := ppu-gcc
 CFLAGS      := -O2 -Wall -mcpu=cell -I$(PSL1GHT)/ppu/include -I$(PORTLIBS)/include
-LDFLAGS     := -L$(PSL1GHT)/ppu/lib -L$(PORTLIBS)/lib -lsysfs -lsysutil -lsysprocess -lsysss -lsyssm -lio -lrt -lm
+LDFLAGS     := -L$(PSL1GHT)/ppu/lib -L$(PORTLIBS)/lib -lsysfs -lsysutil -lsysprocess -lsysss -lsyssm -lrsx -lgcm_sys -lio -lrt -lm
 
-OBJS        := source/main.o source/sys_control.o source/hw_control.o source/pkg_manager.o source/dev_tools.o source/net_tools.o source/game_mods.o
+OBJS        := source/main.o source/graphics.o source/sys_control.o source/hw_control.o source/pkg_manager.o source/dev_tools.o source/net_tools.o source/game_mods.o
 
 all: $(TARGET).pkg
 

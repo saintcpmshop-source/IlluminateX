@@ -1,10 +1,7 @@
 # IlluminateX - Ultimate PS3 Toolkit
-# Copyright (c) 2026 saintcpmshop-source. All Rights Reserved.
-
 TARGET      := IlluminateX
 APPID       := ILUMX0001
 CONTENTID   := UP0000-${APPID}_00-0000000000000001
-VERSION     := 03.00
 
 PS3DEV      := /usr/local/ps3dev
 PSL1GHT     := $(PS3DEV)/psl1ght
@@ -28,11 +25,13 @@ $(TARGET).elf: $(OBJS)
 $(TARGET).self: $(TARGET).elf
 	make_self $(TARGET).elf $(TARGET).self --npdrm
 
-$(TARGET).pkg: $(TARGET).self
-	mkdir -p pkg/USRDIR
+$(TARGET).pkg: $(TARGET).self assets/PARAM.SFO assets/ICON0.PNG
+	mkdir -p pkg/USRDIR/themes
 	cp $(TARGET).self pkg/USRDIR/EBOOT.BIN
 	cp assets/ICON0.PNG pkg/ICON0.PNG
 	cp assets/PARAM.SFO pkg/PARAM.SFO
+	# This line copies all .p3t themes into the package!
+	cp themes-repo/*.p3t pkg/USRDIR/themes/ 
 	pkg.py --contentid $(CONTENTID) pkg/ $(TARGET).pkg
 	rm -rf pkg
 

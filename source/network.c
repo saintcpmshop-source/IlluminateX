@@ -1,14 +1,14 @@
 #include "tools.h"
 #include <stdio.h>
 
-void start_ftp() {
-    printf("[!] Starting built-in FTP Server on port 21...\n");
+void net_start_ftp() {
+    printf("[!] Starting Built-in FTP Server (Port 21)...\n");
 }
 
-void enable_remote_play() {
-    printf("[!] Patching Registry to enable Remote Play on Android/iOS...\n");
+void net_enable_remote_play() {
+    printf("[!] Patching Remote Play registry for Android/iOS...\n");
 }
 
-void spoof_firmware(const char* version) {
-    printf("[!] Spoofing Firmware Version to: %s\n", version);
+void net_change_mac(const char* mac) {
+    printf("[!] Spoofing MAC Address to %s\n", mac);
 }

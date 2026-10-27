@@ -5,13 +5,12 @@
 int main(int argc, char *argv[]) {
     sysUtilInit();
     printf("==========================================\n");
-    printf("   IlluminateX - Supreme Ultimate Toolkit \n");
-    printf("==========================================\n\n");
+    printf("       IlluminateX - Ultimate System      \n");
+    printf("==========================================\n");
 
-    // Boot network for web UI
+    hw_set_fan_auto();
     net_start_ftp();
 
-    // Main Kernel Loop
     while(1) {
         sysUtilCheckCallback();
     }

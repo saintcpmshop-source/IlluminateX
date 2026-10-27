@@ -29,6 +29,17 @@
 
 ---
 
+### 🎨 P3T Theme Creators Wanted!
+
+We are building the biggest collection of custom PS3 themes for the IlluminateX Dashboard. 
+
+**Want your theme featured in the app?**
+Do not submit Pull Requests for themes. Instead, you must open a ticket on our official Discord server to have your `.p3t` file reviewed and added to the official repository.
+
+👉 **[Join our Discord Server to Submit Themes!]([YOUR_DISCORD_INVITE_LINK])**
+
+---
+
 ### 🛡️ License & Copyright
 This project is strictly **Proprietary** and belongs to **saintcpmshop-source**. Please read the [`LICENSE.md`](LICENSE.md) file for the full legal terms.
 
